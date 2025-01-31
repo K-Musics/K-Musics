@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Musics - Music Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .player {
+            margin-top: 100px;
+        }
+        button {
+            background: #ff5733;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to K-Musics</h1>
+    <div class="player">
+        <audio id="audioPlayer" src="song.mp3"></audio>
+        <button onclick="playSong()">Play</button>
+        <button onclick="pauseSong()">Pause</button>
+    </div>
+    
+    <script>
+        function playSong() {
+            document.getElementById("audioPlayer").play();
+        }
+        function pauseSong() {
+            document.getElementById("audioPlayer").pause();
+        }
+    </script>
+</body>
+</html>
